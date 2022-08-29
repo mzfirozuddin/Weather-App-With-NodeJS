@@ -27,7 +27,7 @@ app.get("/about", (req,res) =>{
 });
 
 app.get("/weather", (req,res) =>{
-    res.render("Welcome to my website on weather page");
+    res.render('weather');
 });
 
 
