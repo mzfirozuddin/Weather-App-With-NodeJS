@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,200;0,8..30,300;0,8..30,400;1,8..30,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Piazzolla', serif;
+}
+
+:root{
+    --main-bg : #1e272e;
+    --main-color : #0097e6;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-menu{
+    background-color: var(--main-bg);
+}
+
+.navbar{
+    background-color: var(--main-bg);
+    color: #fff;
+    padding: 1.2rem 0;
+}
+
+.navbar li{
+    margin-left: 2rem;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.navbar-toggler{
+    background-color: #fff;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color: var(--main-color);
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* main header */
+
+.main-header-left{
+    height: 64rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-header-left p{
+    font-size: 2rem;
+}
+
+.main-header-left h1{
+    font-size: 3rem;
+    margin: 1rem 0 2.5rem 0;
+    text-transform: capitalize;
+}
+
+.main-header-left .text-clr{
+    color: var(--main-color);
+}
+.main-header-left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+    outline: none;
+}
+
+.main-header-left button:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+.main-header-right{
+    height: 64rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-header-right figure img{
+    /* box-shadow: 0 10px 6px -6px var(--main-color); */
+    filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.3));
+}
+/* error page style */
+.errimg img{
+    width: 60rem;
+    height: 30rem;
+}
+
+/* footer section */
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+
+/* responsive code */
+
+@media(max-width:768px){
+    .main-header-left{
+        height: auto;
+        margin: 5rem 0;
+    }
+
+    .main-header-right{
+        height: auto;
+        margin-top: 3rem;
+    }
+}
