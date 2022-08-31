@@ -3,8 +3,38 @@ const submitBtn = document.getElementById("submitBtn");
 const city_name = document.getElementById("city-name");
 const temp_real_val = document.getElementById("temp-real-val");
 const temp_status = document.getElementById("temp-status");
-
 const dataHide = document.querySelector(".middle-layer");
+
+const day = document.getElementById("day");
+const date = document.getElementById("today-date");
+
+// GET THE CURRENT DAY
+
+const getCurrentDay = () =>{
+    const weekDay = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const today_day = new Date();
+    let currentDay = weekDay[today_day.getDay()];
+    // console.log(currentDay);
+    return currentDay;
+}
+
+day.innerText = getCurrentDay();
+
+// GET CURRENT DATE
+
+const getCurrentDate = () =>{
+    const month = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEPT","OCT","NOV","DEC"];
+    const today_date = new Date();
+    let monthName = month[today_date.getMonth()];
+    let currentDate = today_date.getDate();
+    // console.log(monthName);
+    // console.log(currentDate);
+    return `${currentDate} ${monthName}`;
+}
+
+date.innerText = getCurrentDate();
+
+// GET WEATHET INFORMATION
 
 const getInformation = async(event) =>{
     event.preventDefault();
